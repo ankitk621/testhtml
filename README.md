@@ -4,8 +4,8 @@
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a test paragraph.</p>
+<h1>Heading that works</h1>
+<p>test paragraph for INP</p>
 
 </body>
 </html>
