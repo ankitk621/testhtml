@@ -4,9 +4,13 @@
 
 </head>
 <body>
+<h1>The button Element</h1>
 
-<h1>Heading that works post adding RUM tag</h1>
-<p>test paragraph for INP post adding RUM tag</p>
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+<p><a href="https://www.w3schools.com/">Visit W3Schools.com!</a></p>
+ 
+<h1>Heading that works post adding RUM tag added button</h1>
+<p>test paragraph for INP post adding RUM tag added button</p>
 
 </body>
 </html>
