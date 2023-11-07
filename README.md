@@ -808,7 +808,6 @@ profiler.dispatchCustomEvent("GlimpseLoaded");
 document.onreadystatechange = function () {
     document.readyState === "complete" && profiler.attachIframe()
 };
-    var finalINPeventname = window.inpEventName
 </script>
 
 
