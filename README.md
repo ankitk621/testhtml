@@ -509,7 +509,7 @@ var AjaxTiming = function () {
                 var i = t.name,
                     r = t.value,
                     u = i === "INP" ? r : undefined;
-                    console.log(t,u,i,r);
+                    console.log(t.entries[0].name,u,i,r);
                 n.inp = u
             };
             this.recordPageLoad = function () {
