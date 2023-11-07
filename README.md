@@ -30,6 +30,126 @@
         return n > t[1] ? "poor" : n > t[0] ? "needs-improvement" : "good"
     },
     bindReporter = function (n, t, i, r) {
+<script>
+    var generateUniqueID = function () {
+    return "v2-" + Date.now() + "-" + (Math.floor(Math.random() * 8999999999999) + 1e12)
+},
+    firstHiddenTime = -1,
+    initHiddenTime = function () {
+        return document.visibilityState === "hidden" ? 0 : Infinity
+    },
+    trackChanges = function () {
+        onHidden(function (n) {
+            var t = n.timeStamp;
+            firstHiddenTime = t
+        }, !0)
+    },
+    getVisibilityWatcher = function () {
+        return firstHiddenTime < 0 && (window.__WEB_VITALS_POLYFILL__ ? (firstHiddenTime = window.webVitals.firstHiddenTime, firstHiddenTime === Infinity && trackChanges()) : (firstHiddenTime = initHiddenTime(), trackChanges()), onBFCacheRestore(function () {
+            setTimeout(function () {
+                firstHiddenTime = initHiddenTime();
+                trackChanges()
+            }, 0)
+        })), {
+            get firstHiddenTime() {
+                return firstHiddenTime
+            }
+        }
+    },
+    getRating = function (n, t) {
+        return n > t[1] ? "poor" : n > t[0] ? "needs-improvement" : "good"
+    },
+    bindReporter = function (n, t, i, r) {
+<script>
+    var generateUniqueID = function () {
+    return "v2-" + Date.now() + "-" + (Math.floor(Math.random() * 8999999999999) + 1e12)
+},
+    firstHiddenTime = -1,
+    initHiddenTime = function () {
+        return document.visibilityState === "hidden" ? 0 : Infinity
+    },
+    trackChanges = function () {
+        onHidden(function (n) {
+            var t = n.timeStamp;
+            firstHiddenTime = t
+        }, !0)
+    },
+    getVisibilityWatcher = function () {
+        return firstHiddenTime < 0 && (window.__WEB_VITALS_POLYFILL__ ? (firstHiddenTime = window.webVitals.firstHiddenTime, firstHiddenTime === Infinity && trackChanges()) : (firstHiddenTime = initHiddenTime(), trackChanges()), onBFCacheRestore(function () {
+            setTimeout(function () {
+                firstHiddenTime = initHiddenTime();
+                trackChanges()
+            }, 0)
+        })), {
+            get firstHiddenTime() {
+                return firstHiddenTime
+            }
+        }
+    },
+    getRating = function (n, t) {
+        return n > t[1] ? "poor" : n > t[0] ? "needs-improvement" : "good"
+    },
+    bindReporter = function (n, t, i, r) {
+<script>
+    var generateUniqueID = function () {
+    return "v2-" + Date.now() + "-" + (Math.floor(Math.random() * 8999999999999) + 1e12)
+},
+    firstHiddenTime = -1,
+    initHiddenTime = function () {
+        return document.visibilityState === "hidden" ? 0 : Infinity
+    },
+    trackChanges = function () {
+        onHidden(function (n) {
+            var t = n.timeStamp;
+            firstHiddenTime = t
+        }, !0)
+    },
+    getVisibilityWatcher = function () {
+        return firstHiddenTime < 0 && (window.__WEB_VITALS_POLYFILL__ ? (firstHiddenTime = window.webVitals.firstHiddenTime, firstHiddenTime === Infinity && trackChanges()) : (firstHiddenTime = initHiddenTime(), trackChanges()), onBFCacheRestore(function () {
+            setTimeout(function () {
+                firstHiddenTime = initHiddenTime();
+                trackChanges()
+            }, 0)
+        })), {
+            get firstHiddenTime() {
+                return firstHiddenTime
+            }
+        }
+    },
+    getRating = function (n, t) {
+        return n > t[1] ? "poor" : n > t[0] ? "needs-improvement" : "good"
+    },
+    bindReporter = function (n, t, i, r) {
+<script>
+    var generateUniqueID = function () {
+    return "v2-" + Date.now() + "-" + (Math.floor(Math.random() * 8999999999999) + 1e12)
+},
+    firstHiddenTime = -1,
+    initHiddenTime = function () {
+        return document.visibilityState === "hidden" ? 0 : Infinity
+    },
+    trackChanges = function () {
+        onHidden(function (n) {
+            var t = n.timeStamp;
+            firstHiddenTime = t
+        }, !0)
+    },
+    getVisibilityWatcher = function () {
+        return firstHiddenTime < 0 && (window.__WEB_VITALS_POLYFILL__ ? (firstHiddenTime = window.webVitals.firstHiddenTime, firstHiddenTime === Infinity && trackChanges()) : (firstHiddenTime = initHiddenTime(), trackChanges()), onBFCacheRestore(function () {
+            setTimeout(function () {
+                firstHiddenTime = initHiddenTime();
+                trackChanges()
+            }, 0)
+        })), {
+            get firstHiddenTime() {
+                return firstHiddenTime
+            }
+        }
+    },
+    getRating = function (n, t) {
+        return n > t[1] ? "poor" : n > t[0] ? "needs-improvement" : "good"
+    },
+    bindReporter = function (n, t, i, r) {
         var u, f;
         return function (e) {
             t.value >= 0 && (e || r) && (f = t.value - (u || 0), (f || u === undefined) && (u = t.value, t.delta = f, t.rating = getRating(t.value, i), n(t)))
@@ -805,11 +925,11 @@ var AjaxTiming = function () {
 window.RProfiler = profiler;
 window.WindowEvent = WindowEvent; 
     profiler.dispatchCustomEvent("GlimpseLoaded");
- document.onreadystatechange = function () {
+ document.onreadystatechange = function () 
+ {
     document.readyState === "complete" && profiler.attachIframe()
 };
-
-    
+   
 </script>
 
 
@@ -825,7 +945,7 @@ window.WindowEvent = WindowEvent;
 <p>test paragraph for INP post adding RUM tag added button</p>
 
 
-<script language="javascript" type="text/javascript">    function init() { window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName;) }    window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
+<script language="javascript" type="text/javascript">    function init() { window.RProfiler.addInfo('tracepoint','bltoken', window.inpEventName;) }    window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
 </script>
 
 </body>
