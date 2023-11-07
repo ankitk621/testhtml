@@ -1,6 +1,7 @@
 <html>
 <head>
-<script>var generateUniqueID = function () {
+<script>
+    var generateUniqueID = function () {
     return "v2-" + Date.now() + "-" + (Math.floor(Math.random() * 8999999999999) + 1e12)
 },
     firstHiddenTime = -1,
@@ -509,9 +510,9 @@ var AjaxTiming = function () {
                 var i = t.name,
                     r = t.value,
                     u = i === "INP" ? r : undefined;
-            console.log(t.entries[0].name,"Entries length : "+t.entries.length,u,i,r);
-            n.inp = t.entries[0].name;
-            n.inpppp = 'Test';
+                    console.log(t.entries, t.entries[0].name,"Entries length : "+t.entries.length,u,i,r);
+                    window.inpEventName = t.entries[0].name;
+                n.inp = u
             };
             this.recordPageLoad = function () {
                 n.data.loadTime = (new Date).getTime();
@@ -803,11 +804,13 @@ var AjaxTiming = function () {
     profiler = new RProfiler;
 window.RProfiler = profiler;
 window.WindowEvent = WindowEvent;
+window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName); 
 profiler.dispatchCustomEvent("GlimpseLoaded");
 document.onreadystatechange = function () {
     document.readyState === "complete" && profiler.attachIframe()
 };
-
+Expand (808 lines)
+has context menu
 </script>
 
 
