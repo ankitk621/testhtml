@@ -804,6 +804,7 @@ var AjaxTiming = function () {
     profiler = new RProfiler;
 window.RProfiler = profiler;
 window.WindowEvent = WindowEvent;
+function init() { window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName); }    window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
 profiler.dispatchCustomEvent("GlimpseLoaded");
 document.onreadystatechange = function () {
     document.readyState === "complete" && profiler.attachIframe()
@@ -822,7 +823,5 @@ document.onreadystatechange = function () {
 <h1>Heading that works post adding RUM tag added button</h1>
 <p>test paragraph for INP post adding RUM tag added button</p>
 
-<script language="javascript" type="text/javascript">    function init() { window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName); }    window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
-</script>
 </body>
 </html>
