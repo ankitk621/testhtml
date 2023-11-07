@@ -808,6 +808,7 @@ profiler.dispatchCustomEvent("GlimpseLoaded");
 document.onreadystatechange = function () {
     document.readyState === "complete" && profiler.attachIframe()
 };
+    var finalINPeventname = window.inpEventName
 </script>
 
 
@@ -822,7 +823,7 @@ document.onreadystatechange = function () {
 <h1>Heading that works post adding RUM tag added button</h1>
 <p>test paragraph for INP post adding RUM tag added button</p>
 
-<script language="javascript" type="text/javascript">    function init() { window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName; }    window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
+<script language="javascript" type="text/javascript">    function init() { window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName); }    window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
 </script>
 </body>
 </html>
