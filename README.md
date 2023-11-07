@@ -511,6 +511,7 @@ var AjaxTiming = function () {
                     u = i === "INP" ? r : undefined;
             console.log(t.entries[0].name,"Entries length : "+t.entries.length,u,i,r);
             n.inp = t.entries[0].name;
+            n.inpppp = 'Test';
             };
             this.recordPageLoad = function () {
                 n.data.loadTime = (new Date).getTime();
