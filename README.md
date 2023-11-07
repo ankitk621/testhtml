@@ -809,7 +809,7 @@ profiler.dispatchCustomEvent("GlimpseLoaded");
 document.onreadystatechange = function () {
     document.readyState === "complete" && profiler.attachIframe()
 };
-    </script>
+</script>
 
 
 </head>
