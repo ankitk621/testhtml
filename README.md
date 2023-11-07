@@ -804,12 +804,12 @@ var AjaxTiming = function () {
     profiler = new RProfiler;
 window.RProfiler = profiler;
 window.WindowEvent = WindowEvent;
-window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName); 
+function init() { window.RProfiler.addInfo('tracepoint', 'bltoken', window.inpEventName); }    window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
 profiler.dispatchCustomEvent("GlimpseLoaded");
 document.onreadystatechange = function () {
     document.readyState === "complete" && profiler.attachIframe()
 };
-</script>
+    </script>
 
 
 </head>
