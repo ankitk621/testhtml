@@ -809,8 +809,6 @@ profiler.dispatchCustomEvent("GlimpseLoaded");
 document.onreadystatechange = function () {
     document.readyState === "complete" && profiler.attachIframe()
 };
-Expand (808 lines)
-has context menu
 </script>
 
 
